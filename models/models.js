@@ -18,7 +18,8 @@ sequelize.sync().success(function(){
 			User.create({
 				apellido: 'Reverso',
 				nombre: 'Sebastián',
-				username: 'sreverso'
+				username: 'sreverso',
+				password: 'seba1234'
 			}).success(function(){console.log('Base de datos inicializada.')});
 		}
 	});
