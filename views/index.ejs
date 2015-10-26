@@ -7,6 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Bienvenido al foro de <%= title %></p>
-    <p>Inicie sesi&oacute;n para comenzar o reg&iacute;strese en el sistema si a&uacure; no lo hizo.</p>
+    <p>Inicie sesi&oacute;n para comenzar o reg&iacute;strese en el sistema si a&uacute; no lo hizo.</p>
+    <form method="get" action="/users/login">
+    	<input type="submit" value="Ingresar">
+    </form>
+    <form method="get" action="/users/newUser">
+    	<input type="submit" value="Registrarse">
+    </form>
   </body>
 </html>
