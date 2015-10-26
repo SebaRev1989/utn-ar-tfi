@@ -1,9 +1,11 @@
-<h1><%= title %></h1>
-<p>Bienvenido al foro de <%= title %></p>
-<p>Inicie sesi&oacute;n para comenzar o reg&iacute;strese en el sistema si a&uacute; no lo hizo.</p>
-<form method="get" action="/users/login">
-	<input type="submit" value="Ingresar">
-</form>
-<form method="get" action="/users/newUser">
-	<input type="submit" value="Registrarse">
-</form>
+<div class="jumbotron">
+	<h1><%= title %></h1>
+	<h3>Bienvenido al foro de <%= title %></h3>
+	<p>Inicie sesi&oacute;n para comenzar o reg&iacute;strese en el sistema si a&uacute;n no lo hizo.</p>
+	<form action="/users/login" method="get">
+		<button type="submit" class="btn btn-success btn-lg">Ingresar</button>
+	</form>
+	<form action="/users/newUser" method="get">
+		<button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+	</form>
+</div>
