@@ -1,11 +1,27 @@
+<div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Usuario" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Contraseña" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Ingresar</button>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+      </form>
+    </div>
+  </nav>
+</div>
 <div class="jumbotron">
 	<h1><%= title %></h1>
 	<h3>Bienvenido al foro de <%= title %></h3>
 	<p>Inicie sesi&oacute;n para comenzar o reg&iacute;strese en el sistema si a&uacute;n no lo hizo.</p>
-	<form action="/users/login" method="get">
+	<!--<form action="/users/login" method="get">
 		<button type="submit" class="btn btn-success btn-lg">Ingresar</button>
 	</form>
 	<form action="/users/newUser" method="get">
 		<button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
-	</form>
+	</form>-->
 </div>
