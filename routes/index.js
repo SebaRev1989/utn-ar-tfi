@@ -11,5 +11,6 @@ router.get('/', function(req, res, next) {
 // Metodos para usuarios
 router.get('/users/login', userController.showLogin);
 router.get('/users/newUser', userController.showNewUser);
+router.post('/users/create', userController.create);
 
 module.exports = router;

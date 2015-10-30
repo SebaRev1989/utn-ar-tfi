@@ -1,1 +1,12 @@
-<p>hola mundo - nuevo user</p>
+<div class="container">
+  <h3 class="form-singin-heading">Crear Usuario</h3>
+  <form class="form-signin">
+    <h4 class="form-signin-heading">Ingrese sus datos</h4>
+    <input type="text" placeholder="Apellido" name="user[apellido]" autofocus><br>
+    <input type="text" placeholder="Nombre" name="user[nombre]" ><br>
+    <input type="text" placeholder="Nombre de Usuario" name="user[username]" ><br>
+    <input type="password" placeholder="Contraseña" name="user[password]" ><br>
+    <button class="btn btn-lg btn-primary" type="submit" formmethod="post" formaction="/users/create">Registrarse</button>
+    <!--<button class="btn btn-lg btn-danger" type="submit" formmethod="get" formaction="/">Cancelar</button>-->
+  </form>
+</div>
