@@ -20,6 +20,7 @@
     "ejs": "~2.3.3",
     "express": "~4.13.1",
     "express-partials": "^0.3.0",
+    "express-session": "^1.12.1",
     "morgan": "~1.6.1",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",
