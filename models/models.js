@@ -27,9 +27,6 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 	}
 	);
 
-// Usar DB SQLite
-var sequelize = new Sequelize(null, null, null, {dialect: "sqlite", storage: "forum.sqlite"});
-
 // Importar la definicion de la tabla Usuarios en user.js
 var User = sequelize.import(path.join(__dirname,'user'));
 
