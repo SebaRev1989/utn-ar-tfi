@@ -24,11 +24,26 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser('tfi-2015-utn'));
 app.use(session({
-  secret: process.env.SESSION_SECRET || '<mysecret>',
+  secret: process.env.SESSION_SECRET || 'tfi-2015-utn',
   resave: true,
   saveUninitialized: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Helpers dinamicos
+app.use(function (req, res, next) {
+  // Si no existe lo inicializa
+  if (!req.session.redir) {
+    req.session.redir = '/';
+  }
+  // Guardar path en session.redir para despues del login
+  if (!req.path.match(/\/login|\/logout|\/user/)) {
+    req.session.redir = req.path;
+  }
+  // Hago visible req.session en las vistas
+  res.locals.session = req.session;
+  next();
+});
 
 app.use('/', routes);
 
