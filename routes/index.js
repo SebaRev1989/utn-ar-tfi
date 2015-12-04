@@ -3,6 +3,7 @@ var router = express.Router();
 
 var userController = require('../controllers/user_controllers');
 var sessionController = require('../controllers/session_controllers');
+var forumController = require('../controllers/forum_controllers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,5 +18,8 @@ router.post('/users/create', userController.create);
 router.get('/login', sessionController.new);
 router.post('/login', sessionController.create);
 router.get('/logout', sessionController.destroy);
+
+// Metodos para mensajes
+router.get('/forum/messages', sessionController.loginRequired, forumController.showAll);
 
 module.exports = router;

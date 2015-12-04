@@ -29,8 +29,10 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 
 // Importar la definicion de la tabla Usuarios en user.js
 var User = sequelize.import(path.join(__dirname,'user'));
+var Message = sequelize.import(path.join(__dirname,'message'));
 
 exports.User = User;  // exporta la definicion de la tabla User
+exports.Message = Message; // exporta la definicion de la tabla Message
 
-// Crea e inicializa la tabla de usuarios en DB
+// Verifica la existencia de la DB y, si no existe, la crea
 sequelize.sync().then(function(){console.log('Base de datos creada.')});
