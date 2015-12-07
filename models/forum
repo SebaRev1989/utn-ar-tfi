@@ -1,13 +1,13 @@
 module.exports = function (sequelize, DataTypes) {
-	return sequelize.define('Message',
+	return sequelize.define('Forum',
 		{
 			idUser: {
 				type: DataTypes.INTEGER,
 				validate: { notEmpty: {msg: "--> Falta usuario"}}
 			},
-			mensaje: {
-				type: DataTypes.TEXT,
-				validate: { notEmpty: {msg: "--> Falta mensaje"}}
+			tema: {
+				type: DataTypes.STRING,
+				validate: { notEmpty: {msg: "--> Falta tema"}}
 			}
 		});
 }

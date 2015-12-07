@@ -29,10 +29,19 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 
 // Importar la definicion de la tabla Usuarios en user.js
 var User = sequelize.import(path.join(__dirname,'user'));
-var Message = sequelize.import(path.join(__dirname,'message'));
+exports.User = User;
 
-exports.User = User;  // exporta la definicion de la tabla User
-exports.Message = Message; // exporta la definicion de la tabla Message
+// Importar la definicion de la tabla Chats en chat.js
+var Chat = sequelize.import(path.join(__dirname,'chat'));
+exports.Chat = Chat;
+
+// Importar la definicion de la tabla Forum en forum.js
+var Forum = sequelize.import(path.join(__dirname,'forum'));
+exports.Forum = Forum;
+
+// Importar la definicion de la tabla Messages en message.js
+var Messages = sequelize.import(path.join(__dirname,'message'));
+exports.Messages = Messages;
 
 // Verifica la existencia de la DB y, si no existe, la crea
 sequelize.sync().then(function(){console.log('Base de datos creada.')});
