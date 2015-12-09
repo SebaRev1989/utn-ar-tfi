@@ -4,6 +4,7 @@ var router = express.Router();
 var userController = require('../controllers/user_controllers');
 var sessionController = require('../controllers/session_controllers');
 var forumController = require('../controllers/forum_controllers');
+var chatController = require('../controllers/chat_controllers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -19,7 +20,13 @@ router.get('/login', sessionController.new);
 router.post('/login', sessionController.create);
 router.get('/logout', sessionController.destroy);
 
-// Metodos para mensajes
-router.get('/forum/messages', sessionController.loginRequired, forumController.showAll);
+// Metodos para foro
+router.get('/forum/principal', sessionController.loginRequired, forumController.showMenu);
+router.get('/forum/newForum', sessionController.loginRequired, forumController.newForum);
+
+// Metodos para chats
+router.get('/chats/principal', sessionController.loginRequired, chatController.showMenu);
+router.get('/chats/newChat', sessionController.loginRequired, chatController.newChat);
+//router.get('/chats/newChat/:userId(\\d+)', sessionController.loginRequired, chatController.loadReciver);
 
 module.exports = router;

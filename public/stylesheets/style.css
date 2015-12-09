@@ -13,9 +13,13 @@ a {
 #page-wrap > .main { padding: 1%;
 }
 
+section {
+	text-align: left;
+	background-color: #eee;
+}
 section > div {padding: 20px;}
 header {text-align: right;}
-nav, section, footer {text-align: left;}
+nav, footer {text-align: left;}
 nav span {margin: 0px 100px 0px 0px}
 
 #ErrorMsgs {color: #f61; font-size: smaller;}

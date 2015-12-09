@@ -20,16 +20,16 @@
       <header class="main" id="h1">
         <%if (!session.user){%>
           <!--<button class="btn btn-lg btn-primary" type="submit" formmethod="get" formaction="/login">Login</button>-->
-          <span><a href="/login">Login</a></span>
-          <span><a href="/users/newUser">Registrarse</a></span>
+          <span class="right"><a href="/login">Login</a> - <a href="/users/newUser">Registrarse</a></span>
         <%} else {%>
-          <span><%=session.user.username%><a href="/logout">Logout<a></span>
+          <span><%=session.user.apellido%>, <%=session.user.nombre%> - <a href="/logout">Logout<a></span>
         <%}%>
       </header>
 
       <nav class="main" id="n1" role="navigation">
         <span><a href="/">Inicio</a></span><br>
-        <span><a href="/forum/messages">Mensajes</a></span><br>
+        <span><a href="/forum/principal">Foro</a></span><br>
+        <span><a href="/chats/principal">Chats</a></span><br>
       </nav>
 
       <section class="main" id="s1">

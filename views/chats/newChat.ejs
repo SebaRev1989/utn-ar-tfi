@@ -1,0 +1,17 @@
+<nav>
+	<p>Seleccione el destinatario</p>
+	<table>
+		<% var i; for (i=0; i < users.length; i++) { %>
+			<tr>
+				<td><a href="/chats/newChat/<%= users[i].id %>"><%= users[i].apellido%>, <%= users[i].nombre%></a></td>
+			</tr>
+		<% } %>
+	</table>
+</nav>
+<section>
+	<p id="chatReciver">Para: </p>
+	mensaje
+</section>
+<footer class="right">
+	<a href="/chats/principal">Volver</a>
+</footer>

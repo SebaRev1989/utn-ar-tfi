@@ -24,7 +24,7 @@ exports.create = function(req, res, next){
 		where: {username: usuario}
 	}).then(function (user) {
 		if (user.username === usuario && user.password === password) {
-			req.session.user = {id:user.id, username:user.username};
+			req.session.user = {id:user.id, username:user.username, apellido:user.apellido, nombre:user.nombre};
 			res.redirect(req.session.redir.toString());
 		} else {
 			console.log('Contraseña incorrecta. Intente nuevamente.');
@@ -41,5 +41,5 @@ exports.create = function(req, res, next){
 // Elimino la sesion
 exports.destroy = function (req, res) {
 	delete req.session.user;
-	res.redirect(req.session.redir.toString());
+	res.redirect('/');
 };
