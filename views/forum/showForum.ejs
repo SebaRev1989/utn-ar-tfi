@@ -1,0 +1,8 @@
+<p>Listado de foros</p>
+<table>
+	<% var i; for (i=0; i < forums.length; i++) { %>
+		<tr>
+			<td>Tema: <a href="#"><%= forums[i].tema%></a></td>
+		</tr>
+	<% } %>
+</table>

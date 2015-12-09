@@ -23,6 +23,8 @@ router.get('/logout', sessionController.destroy);
 // Metodos para foro
 router.get('/forum/principal', sessionController.loginRequired, forumController.showMenu);
 router.get('/forum/newForum', sessionController.loginRequired, forumController.newForum);
+router.post('/forum/newForum', sessionController.loginRequired, forumController.createForum);
+router.get('/forum/showForum', sessionController.loginRequired, forumController.showForum);
 
 // Metodos para chats
 router.get('/chats/principal', sessionController.loginRequired, chatController.showMenu);

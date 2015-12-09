@@ -1,1 +1,9 @@
-hola mundo
+<div class="container">
+	<h4>Nuevo mensaje p&uacute;blico</h4>
+	<form method="post" action="/forum/newForum">
+		<p>Asunto: <input type="text" placeholder="Asunto" name="forum[tema]" autofocus><br></p>
+		<p>Mensaje:</p>
+		<textarea name="message[texto]" id="mmoMensaje" cols="60" rows="10"></textarea><br>
+		<button class="btn btn-primary" type="submit">Publicar</button>
+	</form>
+</div>
