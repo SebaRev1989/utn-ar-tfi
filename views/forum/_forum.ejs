@@ -1,0 +1,20 @@
+<h4>forum.tema</h4>
+<% var i; for (i=0; i < messages.length; i++) { %>
+	<%if (i % 2 === 0){%>
+        <div>
+        	<%= messages[i].mensaje%><br>De: aqui va el usuario
+        </div>
+    <%} else {%>
+        <div class="right">
+        	<%= messages[i].mensaje%><br>De: aqui va el usuario
+        </div> <br><br><br>
+    <%}%>
+<% } %>
+<div class="container">
+	<h5>Respuesta</h5>
+	<form method="post" action="/forum/showForum/<%= idHeader %>">
+		<p>Mensaje:</p>
+		<textarea name="message[texto]" id="mmoMensaje" cols="60" rows="10"></textarea><br>
+		<button class="btn btn-primary" type="submit">Publicar</button>
+	</form>
+</div>

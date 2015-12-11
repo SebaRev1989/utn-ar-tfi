@@ -43,5 +43,7 @@ exports.Forum = Forum;
 var Message = sequelize.import(path.join(__dirname,'message'));
 exports.Message = Message;
 
+//Forum.hasMany()
+
 // Verifica la existencia de la DB y, si no existe, la crea
 sequelize.sync().then(function(){console.log('Base de datos creada.')});

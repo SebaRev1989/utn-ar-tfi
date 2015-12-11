@@ -26,6 +26,7 @@ router.get('/forum/newForum', sessionController.loginRequired, forumController.n
 router.post('/forum/newForum', sessionController.loginRequired, forumController.createForum);
 router.get('/forum/showForum', sessionController.loginRequired, forumController.showForum);
 router.get('/forum/showForum/:forumId(\\d+)', sessionController.loginRequired, forumController.getForum);
+router.post('/forum/showForum/:idHeader(\\d+)', sessionController.loginRequired, forumController.answerForum);
 
 // Metodos para chats
 router.get('/chats/principal', sessionController.loginRequired, chatController.showMenu);
