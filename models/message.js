@@ -12,6 +12,10 @@ module.exports = function (sequelize, DataTypes) {
 			mensaje: {
 				type: DataTypes.TEXT,
 				validate: { notEmpty: {msg: "--> Falta mensaje"}}
+			},
+			tipo: {
+				type: DataTypes.STRING,
+				validate: { notEmpty: {msg: "--> Falta tipo de mensaje"}}
 			}
 		});
 }

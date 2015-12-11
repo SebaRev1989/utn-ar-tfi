@@ -16,7 +16,7 @@ exports.createForum = function (req, res) {
 	.then(function(){
 		models.Forum.max('id').then(function(max){
 			var message = models.Message.build({
-				idHeader: max, idUser: req.session.user.id, mensaje: req.body.message.texto
+				idHeader: max, idUser: req.session.user.id, mensaje: req.body.message.texto, tipo: "foro"
 			}).save()
 			.then(function(){res.redirect('/forum/showForum')});
 		});
@@ -31,3 +31,7 @@ exports.showForum = function (req, res) {
 	).catch(function(error){next(error)});
 }
 
+// Mostrar los mensajes de un determinado foro --> GET /forum/showForum/:forumId(\\d+)
+exports.getForum = function (req, res) {
+	// body...
+}

@@ -2,7 +2,7 @@
 <table>
 	<% var i; for (i=0; i < forums.length; i++) { %>
 		<tr>
-			<td>Tema: <a href="#"><%= forums[i].tema%></a></td>
+			<td>Tema: <a href="/forum/showForum/<%= forums[i].id %>"><%= forums[i].tema%></a></td>
 		</tr>
 	<% } %>
 </table>

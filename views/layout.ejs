@@ -19,7 +19,6 @@
     <div id="page-wrap">
       <header class="main" id="h1">
         <%if (!session.user){%>
-          <!--<button class="btn btn-lg btn-primary" type="submit" formmethod="get" formaction="/login">Login</button>-->
           <span class="right"><a href="/login">Login</a> - <a href="/users/newUser">Registrarse</a></span>
         <%} else {%>
           <span><%=session.user.apellido%>, <%=session.user.nombre%> - <a href="/logout">Logout<a></span>
