@@ -2,11 +2,11 @@
 <% var i; for (i=0; i < messages.length; i++) { %>
 	<%if (i % 2 === 0){%>
         <div>
-        	<%= messages[i].mensaje%><br><!--De: aqui va el usuario-->
+        	<%= messages[i].mensaje%><br><%= messages[i].createdAt%><!--De: aqui va el usuario-->
         </div>
     <%} else {%>
         <div class="right">
-        	<%= messages[i].mensaje%><br><!--De: aqui va el usuario-->
+        	<%= messages[i].mensaje%><br><%= messages[i].createdAt%><!--De: aqui va el usuario-->
         </div> <br><br><br>
     <%}%>
 <% } %>
